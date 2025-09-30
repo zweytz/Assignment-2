@@ -1,7 +1,42 @@
-<div id="vis"></div>
-<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-<script>
-  vegaEmbed('#vis', 'tourism_map.vl.json');
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tourism in Australia – Visualisations</title>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .chart-container {
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tourism in Australia – Interactive Visualisations</h1>
+
+  <!-- Chart 1 -->
+  <div class="chart-container">
+    <h2>Tourism GDP vs Whole Economy GDP (2017–2024)</h2>
+    <div id="vis1"></div>
+  </div>
+
+  <!-- Chart 2 -->
+  <div class="chart-container">
+    <h2>Overnight Tourism Trips by State (2024)</h2>
+    <div id="vis2"></div>
+  </div>
+
+  <script>
+    // Chart 1: GDP line chart
+    vegaEmbed('#vis1', 'week10homework.vl.json'); // save your GDP JSON spec as chart1.json
+
+    // Chart 2: Map chart
+    vegaEmbed('#vis2', 'tourism_map.vl.json'); // save your map JSON spec as chart2.json
+  </script>
+</body>
+</html>

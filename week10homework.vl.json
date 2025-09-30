@@ -1,0 +1,103 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Tourism vs Whole economy GDP with dual y-axes, tooltips, legend filter, and COVID annotation",
+  "data": { "url": "Tourism_GDP.csv" },
+  "resolve": { "scale": { "y": "independent" } },
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "series_filter",
+          "select": { "type": "point", "fields": ["Category"] },
+          "bind": "legend"
+        }
+      ],
+      "transform": [
+        {
+          "fold": ["Whole economy ($b)"],
+          "as": ["Category", "Value"]
+        }
+      ],
+      "mark": { "type": "line", "point": true, "color": "steelblue" },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "quantitative",
+          "title": "Year",
+          "axis": { "labelAngle": 0, "format": "d", "tickMinStep": 1, "orient": "bottom" },
+          "scale": { "nice": false, "padding": 20 }
+        },
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "title": "Whole Economy ($b)",
+          "scale": { "domain": [0, 2700] },
+          "axis": { "titleColor": "steelblue", "values": [0, 900, 1800, 2700] }
+        },
+        "color": {
+          "field": "Category", "type": "nominal",
+          "scale": {
+            "domain": ["Whole economy ($b)", "Tourism ($b)"],
+            "range": ["steelblue", "darkorange"]
+          },
+          "legend": { "title": "" }
+        },
+        "opacity": {
+          "condition": { "param": "series_filter", "value": 1 },
+          "value": 0.1
+        },
+        "tooltip": [
+          { "field": "Year", "type": "quantitative" },
+          { "field": "Category", "type": "nominal" },
+          { "field": "Value", "type": "quantitative", "format": ".2f","title": "Value ($b)" }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "fold": ["Tourism ($b)"],
+          "as": ["Category", "Value"]
+        }
+      ],
+      "mark": { "type": "line", "point": true, "color": "darkorange" },
+      "encoding": {
+        "x": { "field": "Year", "type": "quantitative"},
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "title": "Tourism ($b)",
+          "scale": { "domain": [0, 90] },
+          "axis": { "orient": "right", "titleColor": "darkorange", "values": [0, 30, 60, 90] }
+        },
+        "opacity": {
+          "condition": { "param": "series_filter", "value": 1 },
+          "value": 0.1
+        },
+        "tooltip": [
+          { "field": "Year", "type": "quantitative" },
+          { "field": "Category", "type": "nominal" },
+          { "field": "Value", "type": "quantitative", "format": ".2f","title": "Value ($b)" }
+        ]
+      }
+    },
+    {
+      "data": { "values": [{ "Year": 2020, "yStart": 0, "yEnd": 2700 }] },
+      "mark": { "type": "rule", "color": "red", "strokeDash": [4, 4] },
+      "encoding": {
+        "x": { "field": "Year", "type": "quantitative" },
+        "y": { "field": "yStart", "type": "quantitative", "axis": null },
+        "y2": { "field": "yEnd" }
+      }
+    },
+    {
+      "data": { "values": [{ "Year": 2020, "Value": 60, "label": "COVID impact" }] },
+      "mark": { "type": "text", "color": "red", "dy": 150, "fontSize": 12 },
+      "encoding": {
+        "x": { "field": "Year", "type": "quantitative" },
+        "y": { "field": "Value", "type": "quantitative", "axis": null },
+        "text": { "field": "label" }
+      }
+    }
+  ]
+}

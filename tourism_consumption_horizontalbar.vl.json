@@ -1,0 +1,65 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Change in GVA by tourism industry (2023 to 2024), current prices",
+  "data": { 
+    "url": "Change in gross value added by tourism industry, 2022-23 to 2023-24, current prices.csv"
+  },
+  "title": {
+    "text": "Change in Gross Value Added by Tourism Industry (2023 to 2024)",
+    "fontSize": 18,
+    "anchor": "start"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "y": {
+          "field": "Tourism industry",
+          "type": "nominal",
+          "sort": "-x",
+          "title": "Tourism Industry",
+          "axis": { "labelLimit": 300 }
+        },
+        "x": {
+          "field": "GVA ($b)",
+          "type": "quantitative",
+          "title": "Change in GVA ($ billions)",
+          "axis": { "grid": true }
+        },
+        "color": {
+          "condition": {
+            "test": "datum['GVA ($b)'] < 0",
+            "value": "#d73027"
+          },
+          "value": "#493699"
+        },
+        "tooltip": [
+          { "field": "Tourism industry", "title": "Industry" },
+          { "field": "GVA ($b)", "title": "GVA Change ($b)", "format": ".3f" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#333"
+      },
+      "encoding": {
+        "y": { "field": "Tourism industry", "type": "nominal", "sort": "-x" },
+        "x": { "field": "GVA ($b)", "type": "quantitative" },
+        "text": {
+          "field": "GVA ($b)",
+          "type": "quantitative",
+          "format": ".3f"
+        }
+      }
+    }
+  ]
+}

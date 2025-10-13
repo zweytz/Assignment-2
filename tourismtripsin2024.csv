@@ -1,9 +1,9 @@
-﻿State Code,State Name,Trips
-1,New South Wales,37485
-2,Victoria,29141
-3,Queensland,26187
-4,South Australia,7594
-5,Western Australia,10854
-6,Tasmania,3192
-7,Northern Territory,1422
-8,Australian Capital Territory,3098
+﻿State Code,State Name,Trips,spend,lat,lon
+1,New South Wales,37500000,31500000000,-31.2532,146.9211
+2,Victoria,29100000,22800000000,-36.5986,144.6780
+3,Queensland,26200000,29100000000,-20.9176,142.7028
+4,South Australia,7600000,6600000000,-30.0002,136.2092
+5,Western Australia,10900000,11500000000,-25.0423,117.7932
+6,Tasmania,3200000,3700000000,-41.4545,145.9707
+7,Northern Territory,1400000,2500000000,-19.4914,132.5510
+8,Australian Capital Territory,3100000,2600000000,-35.4735,149.0124

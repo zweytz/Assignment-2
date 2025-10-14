@@ -4,7 +4,6 @@
   "data": { 
     "url": "Tourism consumption in purchasers' prices over time.csv"
   },
-  "title": null,
   "transform": [
     {
       "fold": ["Domestic consumption ($b)", "International consumption ($b)"],

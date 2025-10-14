@@ -9,6 +9,12 @@
     "type": "fit",
     "contains": "padding"
   },
+      "config": {
+    "font": "Poppins",
+    "axis": { "labelFont": "Poppins", "titleFont": "Poppins" },
+    "legend": { "labelFont": "Poppins", "titleFont": "Poppins" },
+    "title": { "font": "Poppins" }
+  },
   "layer": [
     {
       "mark": {

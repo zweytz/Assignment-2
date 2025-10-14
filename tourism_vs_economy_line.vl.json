@@ -6,7 +6,12 @@
   "autosize": {
     "type": "fit"
   },
-
+    "config": {
+    "font": "Poppins",
+    "axis": { "labelFont": "Poppins", "titleFont": "Poppins" },
+    "legend": { "labelFont": "Poppins", "titleFont": "Poppins" },
+    "title": { "font": "Poppins" }
+  },
   "resolve": { "scale": { "y": "independent" } },
   "layer": [
     {

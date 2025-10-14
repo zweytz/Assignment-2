@@ -74,15 +74,12 @@ p.section-desc {
   width: 100%;
 }
 
-/* Map (top) */
 #map {
-  display: flex;
-  justify-content: center;
-  max-width: 100%;
-}
+  display: flex; justify-content: center;
+} 
 
 #map > div {
-  width: 90%;
+  margin: 0 auto;
 }
 
 #gdp > div {

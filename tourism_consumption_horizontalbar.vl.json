@@ -38,7 +38,7 @@
         },
         "tooltip": [
           { "field": "Tourism industry", "title": "Industry" },
-          { "field": "GVA ($b)", "title": "GVA Change ($b)", "format": ".3f" }
+          { "field": "GVA ($b)", "title": "GVA Change ($ billion)", "format": ".3f" }
         ]
       }
     },

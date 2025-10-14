@@ -3,6 +3,9 @@
   "projection": { "type": "mercator" },
   "height": 600,
   "width": "container",
+  "autosize": {
+    "type": "fit"
+  },
   "layer": [
     {
       "data": {

@@ -70,18 +70,38 @@ p.section-desc {
   align-items: center;
 }
 
+/* --- Global Chart Style (already in your file) --- */
 .chart > div {
   width: 100%;
 }
 
+/* Map (top) */
 #map {
   display: flex;
   justify-content: center;
+  max-width: 100%;
 }
 
 #map > div {
-  margin: 0 auto;
+  width: 90%;    /* 👈 adjust this as needed */
+  max-width: 900px;
 }
+
+#gdp > div {
+  width: 80%;    /* 👈 for example, narrower than the map */
+  max-width: 800px;
+}
+
+#bar > div {
+  width: 85%;
+  max-width: 850px;
+}
+
+#area > div {
+  width: 75%;
+  max-width: 750px;
+}
+
 
 footer {
   font-size: 14px;

@@ -1,42 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Tourism in Australia – Visualisations</title>
+  <meta charset="UTF-8" />
+  <title>Tourism in Australia – Data Visualisation</title>
+
+  <!-- Vega & Vega-Lite -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9fafb;
+      color: #333;
+      margin: 0;
+      padding: 0;
     }
-    .chart-container {
-      margin-bottom: 50px;
+
+    header {
+      text-align: center;
+      padding: 30px 10px 10px 10px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    p.section-desc {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #555;
+    }
+
+    .vis-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding-bottom: 50px;
+    }
+
+    .chart {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      width: 95%;
+      max-width: 950px;
+    }
+
+    footer {
+      font-size: 14px;
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      background-color: #f1f1f1;
+      border-top: 1px solid #ddd;
+    }
+
+    footer a {
+      color: #493699;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
+
 <body>
-  <h1>Tourism in Australia – Interactive Visualisations</h1>
+  <header>
+    <h1>Tourism in Australia – Data Visualisation</h1>
+    <p class="section-desc">
+      An interactive exploration of domestic tourism, economic impact, and industry trends in Australia.
+    </p>
+  </header>
 
-  <!-- Chart 1 -->
-  <div class="chart-container">
-    <h2>Tourism GDP vs Whole Economy GDP (2017–2024)</h2>
-    <div id="vis1"></div>
+  <div class="vis-container">
+
+    <!-- 1. Bubble Map -->
+    <section class="chart">
+      <h2>Overnight Tourism Trips in Australia (2024)</h2>
+      <p class="section-desc">
+        States with the largest number of overnight trips are highlighted using bubble sizes. 
+        New South Wales and Victoria show the highest activity.
+      </p>
+      <div id="map"></div>
+    </section>
+
+    <!-- 2. GDP Dual-axis Line Chart -->
+    <section class="chart">
+      <h2>Tourism vs Whole Economy GDP Over Time</h2>
+      <p class="section-desc">
+        This chart shows the contribution of tourism GDP compared to the overall economy.
+        The COVID-19 impact in 2020 is clearly visible.
+      </p>
+      <div id="gdp"></div>
+    </section>
+
+    <!-- 3. GVA Bar Chart -->
+    <section class="chart">
+      <h2>Change in Gross Value Added by Tourism Industry</h2>
+      <p class="section-desc">
+        Education, transport and food services industries had the largest growth between 2022–23 and 2023–24.
+      </p>
+      <div id="bar"></div>
+    </section>
+
+    <!-- 4. Area Chart -->
+    <section class="chart">
+      <h2>Tourism Consumption Over Time</h2>
+      <p class="section-desc">
+        Domestic tourism consumption dominates overall tourism spend, with international consumption showing recovery after 2020.
+      </p>
+      <div id="area"></div>
+    </section>
+
   </div>
 
-  <!-- Chart 2 -->
-  <div class="chart-container">
-    <h2>Overnight Tourism Trips by State (2024)</h2>
-    <div id="vis2"></div>
-  </div>
+  <footer>
+    <p>
+      Data sources: 
+      <a href="https://www.tra.gov.au/en/domestic/domestic-tourism-results" target="_blank">Tourism Research Australia</a>,
+      <a href="https://www.abs.gov.au/statistics/economy/national-accounts/tourism-satellite-account/latest-release" target="_blank">ABS</a>
+    </p>
+    <p>Author: Jake Zweytzer &nbsp;|&nbsp; FIT3179 Data Visualisation 2 &nbsp;|&nbsp; 2025</p>
+  </footer>
 
   <script>
-    // Chart 1: GDP line chart
-    vegaEmbed('#vis1', 'week10homework.vl.json'); // save your GDP JSON spec as chart1.json
-
-    // Chart 2: Map chart
-    vegaEmbed('#vis2', 'tourism_map.vl.json'); // save your map JSON spec as chart2.json
+    vegaEmbed('#map', 'tourism_map.vl.json');
+    vegaEmbed('#gdp', 'tourism_vs_economy_line.vl.json');
+    vegaEmbed('#bar', 'tourism_consumption_horizontalbar_bar.vl.json');
+    vegaEmbed('#area', 'changes_GVA_area.vl.json');
   </script>
 </body>
 </html>

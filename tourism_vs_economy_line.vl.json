@@ -65,7 +65,7 @@
           "as": ["Category", "Value"]
         }
       ],
-      "mark": { "type": "line", "point": { "filled": true }},
+      "mark": { "type": "line", "point": { "filled": true }, "color": "#f4a261" },
       "encoding": {
         "x": { "field": "Year", "type": "quantitative"},
         "y": {

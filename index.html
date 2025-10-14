@@ -9,9 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="style.css" />
-
 </head>
 
 <body>
@@ -22,45 +20,77 @@
     </p>
   </header>
 
-  <div class="vis-container">
+  <div class="grid-container">
 
-    <!-- 1. Bubble Map -->
-    <section class="chart">
-      <h2>Overnight Tourism Trips in Australia (2024)</h2>
-      <p class="section-desc">
-        States with the largest number of overnight trips are highlighted using bubble sizes. 
-        New South Wales and Victoria show the highest activity.
-      </p>
-      <div id="map"></div>
-    </section>
+    <div class="grid-item full-width">
+      <div class="chart">
+        <h2>Overnight Tourism Trips in Australia (2024)</h2>
+        <p class="section-desc">
+          States with the largest number of overnight trips are highlighted using bubble sizes. 
+          New South Wales and Victoria show the highest activity.
+        </p>
+        <div id="map"></div>
+      </div>
+    </div>
 
-    <!-- 2. GDP Dual-axis Line Chart -->
-    <section class="chart">
-      <h2>Tourism vs Whole Economy GDP Over Time</h2>
-      <p class="section-desc">
-        This chart shows the contribution of tourism GDP compared to the overall economy.
-        The COVID-19 impact in 2020 is clearly visible.
-      </p>
-      <div id="gdp"></div>
-    </section>
+    <div class="grid-item">
+      <div class="text-box">
+        <h3>Domestic Travel</h3>
+        <p>Domestic tourism remains the largest contributor to overall travel activity in Australia. NSW and VIC continue to lead the nation.</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="text-box">
+        <h3>International Travel</h3>
+        <p>International travel has rebounded strongly since the COVID-19 downturn, with Queensland showing the largest relative growth.</p>
+      </div>
+    </div>
 
-    <!-- 3. GVA Bar Chart -->
-    <section class="chart">
-      <h2>Change in Gross Value Added by Tourism Industry</h2>
-      <p class="section-desc">
-        Education, transport and food services industries had the largest growth between 2022–23 and 2023–24.
-      </p>
-      <div id="bar"></div>
-    </section>
+    <div class="grid-item">
+      <div class="chart">
+        <h2>Change in Gross Value Added by Tourism Industry</h2>
+        <p class="section-desc">
+          Education, transport and food services industries had the largest growth between 2022–23 and 2023–24.
+        </p>
+        <div id="bar"></div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="chart">
+        <h2>Tourism vs Whole Economy GDP Over Time</h2>
+        <p class="section-desc">
+          This chart shows the contribution of tourism GDP compared to the overall economy.
+          The COVID-19 impact in 2020 is clearly visible.
+        </p>
+        <div id="gdp"></div>
+      </div>
+    </div>
 
-    <!-- 4. Area Chart -->
-    <section class="chart">
-      <h2>Tourism Consumption Over Time</h2>
-      <p class="section-desc">
-        Domestic tourism consumption dominates overall tourism spend, with international consumption showing recovery after 2020.
-      </p>
-      <div id="area"></div>
-    </section>
+    <div class="grid-item">
+      <div class="text-box">
+        <h3>Economic Recovery</h3>
+        <p>The tourism sector has recovered faster than expected, led by education, transport, and food service industries.</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="text-box">
+        <h3>Key Economic Drivers</h3>
+        <p>Policy changes, border reopening, and increased international arrivals are driving the rebound in tourism GDP.</p>
+      </div>
+    </div>
+
+    <div class="grid-item">
+      <div class="text-box">
+        <h3>Tourism Consumption Trends</h3>
+        <p>Domestic tourism consumption dominates, but international consumption is recovering steadily post-pandemic.</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="chart">
+        <h2>Tourism Consumption Over Time</h2>
+        <div id="area"></div>
+      </div>
+    </div>
 
   </div>
 

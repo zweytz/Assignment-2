@@ -36,7 +36,8 @@
           "field": "Trips",
           "type": "quantitative",
           "title": "Overnight Trips",
-          "scale": { "type": "sqrt", "range": [100, 3000] }
+          "scale": { "type": "sqrt", "range": [100, 3000] },
+          "legend": null
         },
         "color": { "value": "#493699" },
         "tooltip": [

@@ -2,9 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Tourism vs Whole economy GDP with dual y-axes, tooltips, legend filter, and COVID annotation",
   "data": { "url": "Tourism_GDP.csv" },
-      "autosize": {
-    "type": "fit"
-  },
+  "autosize": { "type": "fit" },
   "resolve": { "scale": { "y": "independent" } },
   "layer": [
     {
@@ -21,14 +19,17 @@
           "as": ["Category", "Value"]
         }
       ],
-      "mark": { "type": "line", "point": { "filled": true, "color": "#f4a261" }, "color": "#f4a261" },
+      "mark": {
+        "type": "line",
+        "point": { "filled": true },
+        "strokeWidth": 3
+      },
       "encoding": {
         "x": {
           "field": "Year",
           "type": "quantitative",
           "title": "Year",
-          "axis": { "labelAngle": 0, "format": "d", "tickMinStep": 1, "orient": "bottom" },
-          "scale": { "nice": false, "padding": 20 }
+          "axis": { "labelAngle": 0, "format": "d", "tickMinStep": 1 }
         },
         "y": {
           "field": "Value",
@@ -38,7 +39,8 @@
           "axis": { "titleColor": "#493699", "values": [0, 900, 1800, 2700] }
         },
         "color": {
-          "field": "Category", "type": "nominal",
+          "field": "Category",
+          "type": "nominal",
           "scale": {
             "domain": ["Whole economy ($ billion)", "Tourism ($ billion)"],
             "range": ["#493699", "#f4a261"]
@@ -52,7 +54,7 @@
         "tooltip": [
           { "field": "Year", "type": "quantitative" },
           { "field": "Category", "type": "nominal" },
-          { "field": "Value", "type": "quantitative", "format": ".2f","title": "Value ($b)" }
+          { "field": "Value", "type": "quantitative", "format": ".2f", "title": "Value ($b)" }
         ]
       }
     },
@@ -63,15 +65,27 @@
           "as": ["Category", "Value"]
         }
       ],
-      "mark": { "type": "line", "point": { "filled": true, "color": "#f4a261" }, "color": "#f4a261" },
+      "mark": {
+        "type": "line",
+        "point": { "filled": true },
+        "strokeWidth": 3
+      },
       "encoding": {
-        "x": { "field": "Year", "type": "quantitative"},
+        "x": { "field": "Year", "type": "quantitative" },
         "y": {
           "field": "Value",
           "type": "quantitative",
           "title": "Tourism ($b)",
           "scale": { "domain": [0, 90] },
           "axis": { "orient": "right", "titleColor": "#f4a261", "values": [0, 30, 60, 90] }
+        },
+        "color": {
+          "field": "Category",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Whole economy ($ billion)", "Tourism ($ billion)"],
+            "range": ["#493699", "#f4a261"]
+          }
         },
         "opacity": {
           "condition": { "param": "series_filter", "value": 1 },
@@ -80,7 +94,7 @@
         "tooltip": [
           { "field": "Year", "type": "quantitative" },
           { "field": "Category", "type": "nominal" },
-          { "field": "Value", "type": "quantitative", "format": ".2f","title": "Value ($b)" }
+          { "field": "Value", "type": "quantitative", "format": ".2f", "title": "Value ($b)" }
         ]
       }
     },

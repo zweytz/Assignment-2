@@ -4,11 +4,6 @@
   "data": { 
     "url": "Change in gross value added by tourism industry, 2022-23 to 2023-24, current prices.csv"
   },
-  "title": {
-    "text": "Change in Gross Value Added by Tourism Industry (2023 to 2024)",
-    "fontSize": 18,
-    "anchor": "start"
-  },
   "layer": [
     {
       "mark": {

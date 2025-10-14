@@ -4,11 +4,6 @@
   "data": { 
     "url": "Tourism consumption in purchasers' prices over time.csv"
   },
-  "title": {
-    "text": "Tourism Consumption Over Time (Domestic vs International)",
-    "fontSize": 18,
-    "anchor": "start"
-  },
   "transform": [
     {
       "fold": ["Domestic consumption ($b)", "International consumption ($b)"],

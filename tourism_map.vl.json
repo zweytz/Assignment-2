@@ -3,11 +3,6 @@
   "projection": { "type": "mercator" },
   "width": "container",
   "height": 600,
-  "title": {
-    "text": "Overnight Tourism Trips in Australia (2024)",
-    "fontSize": 20,
-    "anchor": "middle"
-  },
   "layer": [
     {
       "data": {

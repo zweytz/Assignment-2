@@ -42,7 +42,7 @@
         "color": {
           "field": "Category", "type": "nominal",
           "scale": {
-            "domain": ["Whole economy ($ billion)", "Tourism ($ billion)"],
+            "domain": ["Whole economy ($b)", "Tourism ($b)"],
             "range": ["#493699", "#f4a261"]
           },
           "legend": { "title": "" }

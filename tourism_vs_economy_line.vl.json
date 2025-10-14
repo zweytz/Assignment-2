@@ -19,7 +19,7 @@
       ],
       "transform": [
         {
-          "fold": ["Whole economy ($ billion)"],
+          "fold": ["Whole economy ($b)"],
           "as": ["Category", "Value"]
         }
       ],
@@ -61,7 +61,7 @@
     {
       "transform": [
         {
-          "fold": ["Tourism ($ billion)"],
+          "fold": ["Tourism ($b)"],
           "as": ["Category", "Value"]
         }
       ],

@@ -82,6 +82,7 @@ p.section-desc {
   margin: 0 auto;
   width: 90%;
   max-width: 1600px;
+  min-height: 600px;
 }
 
 #gdp > div {

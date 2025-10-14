@@ -103,41 +103,25 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-/* Make rows only as tall as their contents and pack items tightly */
-.grid-container {
-  grid-auto-rows: auto;
-  align-items: start;          /* cards align to top of their grid cell */
-  grid-auto-flow: row dense;   /* fills empty cells to avoid big gaps */
-}
-
-/* Ensure each grid item doesn't stretch and sits at the top */
-.grid-item {
-  align-self: start;
-}
-
-/* Cards size to content, no extra bottom spacing */
-.chart, .text-box {
-  height: auto;
+/* Reduce bottom space under all charts */
+.chart {
   margin-bottom: 0;
-  padding-bottom: 20px;
+  padding-bottom: 0;
 }
 
-/* Remove any extra bottom space vega-embed might add */
-.chart > div,
-.chart > div.vega-embed,
-.chart > div.vega-embed > svg {
-  display: block;
+/* Specifically reduce the gap below the GDP chart */
+#gdp {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Remove any margin that vega-embed adds to the SVG itself */
+#gdp > div {
   margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
-/* If this one card is much wider (legend on the right), 
-   you can make JUST that card span both columns to avoid an empty cell */
-#gdp {
-  grid-column: auto;    /* default; or use 1 / -1 to span both columns */
+/* Optionally make the text box sit closer to the item above */
+.text-box {
+  margin-top: 10px; /* or even 0 if you want them very tight */
 }
-/* To test spanning across both columns (often fixes the gap immediately), uncomment: */
-/*
-#gdp {
-  grid-column: 1 / -1;
-}
-*/

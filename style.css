@@ -73,7 +73,9 @@ p.section-desc {
 
 .chart > div {
   width: 100%;
+  overflow-x: auto;  /* adds scroll if needed on very small screens */
 }
+
 
 #map {
   display: flex;

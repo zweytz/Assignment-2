@@ -2,6 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Tourism vs Whole economy GDP with dual y-axes, tooltips, legend filter, and COVID annotation",
   "data": { "url": "Tourism_GDP.csv" },
+  "width": "container",
     "autosize": {
     "type": "fit"
   },

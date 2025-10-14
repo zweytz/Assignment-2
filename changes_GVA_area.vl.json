@@ -4,6 +4,7 @@
   "data": { 
     "url": "Tourism consumption in purchasers' prices over time.csv"
   },
+  "width": "container",
     "autosize": {
     "type": "fit"
   },

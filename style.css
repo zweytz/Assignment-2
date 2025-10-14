@@ -75,9 +75,9 @@ p.section-desc {
 
 .chart > div {
   width: 100%;
-  max-width: 100%;
-  overflow-x: auto; /* if content gets wider, make it scroll inside, not outside */
+  overflow-x: auto;  /* adds scroll if needed on very small screens */
 }
+
 
 
 

@@ -18,7 +18,7 @@
           "as": ["Category", "Value"]
         }
       ],
-      "mark": { "type": "line", "point": true, "color": "steelblue" },
+      "mark": { "type": "line", "point": { "filled": true, "color": "#f4a261" }, "color": "#f4a261" },
       "encoding": {
         "x": {
           "field": "Year",
@@ -32,13 +32,13 @@
           "type": "quantitative",
           "title": "Whole Economy ($b)",
           "scale": { "domain": [0, 2700] },
-          "axis": { "titleColor": "steelblue", "values": [0, 900, 1800, 2700] }
+          "axis": { "titleColor": "#493699", "values": [0, 900, 1800, 2700] }
         },
         "color": {
           "field": "Category", "type": "nominal",
           "scale": {
             "domain": ["Whole economy ($b)", "Tourism ($b)"],
-            "range": ["steelblue", "darkorange"]
+            "range": ["#493699", "#f4a261"]
           },
           "legend": { "title": "" }
         },
@@ -60,7 +60,7 @@
           "as": ["Category", "Value"]
         }
       ],
-      "mark": { "type": "line", "point": true, "color": "darkorange" },
+      "mark": { "type": "line", "point": { "filled": true, "color": "#f4a261" }, "color": "#f4a261" },
       "encoding": {
         "x": { "field": "Year", "type": "quantitative"},
         "y": {
@@ -68,7 +68,7 @@
           "type": "quantitative",
           "title": "Tourism ($b)",
           "scale": { "domain": [0, 90] },
-          "axis": { "orient": "right", "titleColor": "darkorange", "values": [0, 30, 60, 90] }
+          "axis": { "orient": "right", "titleColor": "#f4a261", "values": [0, 30, 60, 90] }
         },
         "opacity": {
           "condition": { "param": "series_filter", "value": 1 },

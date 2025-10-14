@@ -32,7 +32,7 @@
         "color": {
           "condition": {
             "test": "datum['GVA ($b)'] < 0",
-            "value": "#d73027"
+            "value": "#f4a261"
           },
           "value": "#493699"
         },
@@ -52,7 +52,7 @@
         "color": "#333"
       },
       "encoding": {
-        "y": { "field": "Tourism industry", "type": "nominal", "sort": "-x" },
+        "y": { "field": "Tourism industry", "type": "nominal", "sort": "x" },
         "x": { "field": "GVA ($b)", "type": "quantitative" },
         "text": {
           "field": "GVA ($b)",

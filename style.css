@@ -104,24 +104,18 @@ footer a:hover {
   text-decoration: underline;
 }
 /* Reduce bottom space under all charts */
-.chart {
-  margin-bottom: 0;
-  padding-bottom: 0;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px;
+  grid-auto-rows: auto;       /* Each item gets its own height */
+  align-items: start;         /* Align items to top */
+  grid-auto-flow: row dense;  /* Fill layout tightly */
 }
 
-/* Specifically reduce the gap below the GDP chart */
-#gdp {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-/* Remove any margin that vega-embed adds to the SVG itself */
-#gdp > div {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* Optionally make the text box sit closer to the item above */
-.text-box {
-  margin-top: 10px; /* or even 0 if you want them very tight */
+.grid-item {
+  align-self: start;          /* Ensure each box starts at the top of its cell */
 }

@@ -26,7 +26,7 @@
           "as": "tooltipSpend"
         }
       ],
-      "mark": { "type": "circle", "opacity": 0.7, "stroke": "black", "strokeWidth": 1 },
+      "mark": { "type": "circle", "stroke": "black", "strokeWidth": 1 },
       "encoding": {
         "longitude": { "field": "lon", "type": "quantitative" },
         "latitude": { "field": "lat", "type": "quantitative" },

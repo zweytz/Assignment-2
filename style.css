@@ -88,8 +88,7 @@ p.section-desc {
 }
 
 #gdp > div {
-  width: 80%;    /* 👈 for example, narrower than the map */
-  max-width: 800px;
+  width: 80%;
 }
 
 #bar > div {

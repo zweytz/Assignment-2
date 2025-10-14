@@ -6,7 +6,8 @@
   },
   "width": "container",
     "autosize": {
-    "type": "fit"
+    "type": "fit",
+    "contains": "padding"
   },
   "layer": [
     {

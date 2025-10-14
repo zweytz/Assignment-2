@@ -4,7 +4,8 @@
   "data": { "url": "Tourism_GDP.csv" },
   "width": "container",
     "autosize": {
-    "type": "fit"
+    "type": "fit",
+    "contains": "padding"
   },
   "resolve": { "scale": { "y": "independent" } },
   "layer": [

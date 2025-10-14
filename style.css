@@ -85,21 +85,6 @@ p.section-desc {
   min-height: 600px;
 }
 
-#gdp > div {
-  width: 85%;
-  max-width: 850px;
-}
-
-#bar > div {
-  width: 85%;
-  max-width: 850px;
-}
-
-#area > div {
-  width: 85%;
-  max-width: 850px;
-}
-
 
 footer {
   font-size: 14px;

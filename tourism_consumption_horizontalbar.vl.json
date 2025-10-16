@@ -33,7 +33,7 @@
           "type": "nominal",
           "sort": "-x",
           "title": "Tourism Industry",
-          "axis": { "labelLimit": 300, "labelFontSize": 12, "titleFontSize": 13}
+          "axis": { "labelLimit": 300, "labelFontSize": 10, "titleFontSize": 13}
         },
         "x": {
           "field": "GVA ($b)",
@@ -63,7 +63,7 @@
         "type": "text",
         "align": "left",
         "dx": 5,
-        "fontSize": 8,
+        "fontSize": 12,
         "fontWeight": "bold",
         "color": "#333"
       },

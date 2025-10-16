@@ -117,11 +117,16 @@ footer a:hover {
   max-width: 1100px;
   margin: 0 auto;
   padding: 30px;
-  grid-auto-rows: auto;       /* Each item gets its own height */
-  align-items: start;         /* Align items to top */
-  grid-auto-flow: row dense;  /* Fill layout tightly */
+  grid-auto-rows: auto; 
+  align-items: start;  
+  grid-auto-flow: row dense; 
 }
 
 .grid-item {
-  align-self: start;          /* Ensure each box starts at the top of its cell */
+  align-self: start; 
+}
+
+.move-up {
+  align-self: start;
+  margin-top: -160px; /* adjust this value to match the gap */
 }

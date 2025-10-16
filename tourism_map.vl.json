@@ -3,15 +3,19 @@
   "projection": { "type": "mercator" },
   "height": 600,
   "width": "container",
-  "autosize": {
-    "type": "fit"
-  },
-    "config": {
+  "autosize": { "type": "fit" },
+  "config": {
     "font": "Poppins",
     "axis": { "labelFont": "Poppins", "titleFont": "Poppins" },
     "legend": { "labelFont": "Poppins", "titleFont": "Poppins" },
     "title": { "font": "Poppins" }
   },
+  "params": [
+    {
+      "name": "state_select",
+      "select": { "type": "point", "fields": ["State Name"] }
+    }
+  ],
   "layer": [
     {
       "data": {
@@ -32,7 +36,7 @@
           "as": "tooltipSpend"
         }
       ],
-      "mark": { "type": "circle", "opacity": 0.7, "stroke": "black", "strokeWidth": 1 },
+      "mark": { "type": "circle", "stroke": "black", "strokeWidth": 1 },
       "encoding": {
         "longitude": { "field": "lon", "type": "quantitative" },
         "latitude": { "field": "lat", "type": "quantitative" },
@@ -44,6 +48,10 @@
           "legend": null
         },
         "color": { "value": "#493699" },
+        "opacity": {
+          "condition": { "param": "state_select", "value": 1 },
+          "value": 0.2
+        },
         "tooltip": [
           { "field": "State Name", "title": "State" },
           { "field": "tooltipTrip", "title": "Overnight Trips" },

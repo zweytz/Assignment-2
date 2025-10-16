@@ -21,6 +21,12 @@
         "type": "bar",
         "cornerRadiusEnd": 3
       },
+      "params": [
+        {
+          "name": "industry_select",
+          "select": { "type": "point", "fields": ["Tourism industry"] }
+        }
+      ],
       "encoding": {
         "y": {
           "field": "Tourism industry",
@@ -41,6 +47,10 @@
             "value": "#f4a261"
           },
           "value": "#493699"
+        },
+        "opacity": {
+          "condition": { "param": "industry_select", "value": 1 },
+          "value": 0.3
         },
         "tooltip": [
           { "field": "Tourism industry", "title": "Industry" },

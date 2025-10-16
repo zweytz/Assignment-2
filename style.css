@@ -133,5 +133,5 @@ footer a:hover {
 
 .move-up {
   align-self: start;
-  margin-top: -160px; /* adjust this value to match the gap */
+  margin-top: -180px; /* adjust this value to match the gap */
 }

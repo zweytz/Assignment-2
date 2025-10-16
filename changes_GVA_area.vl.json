@@ -25,6 +25,13 @@
     "interpolate": "monotone",
     "opacity": 0.8
   },
+  "params": [
+    {
+      "name": "series_filter",
+      "select": { "type": "point", "fields": ["Category"] },
+      "bind": "legend"
+    }
+  ],
   "encoding": {
     "x": {
       "field": "Financial year",
@@ -45,6 +52,10 @@
         "range": ["#493699", "#f4a261"]
       },
       "title": ""
+    },
+    "opacity": {
+      "condition": { "param": "series_filter", "value": 1 },
+      "value": 0.2
     },
     "tooltip": [
       { "field": "Financial year", "title": "Financial Year" },

@@ -63,7 +63,7 @@
         "type": "text",
         "align": "left",
         "dx": 5,
-        "fontSize": 10,
+        "fontSize": 8,
         "fontWeight": "bold",
         "color": "#333"
       },

@@ -5,10 +5,10 @@
     "url": "Tourism consumption in purchasers' prices over time.csv"
   },
   "width": "container",
-    "autosize": {
+  "autosize": {
     "type": "fit"
   },
-      "config": {
+  "config": {
     "font": "Poppins",
     "axis": { "labelFont": "Poppins", "titleFont": "Poppins", "labelFontSize": 12, "titleFontSize": 13 },
     "legend": { "labelFont": "Poppins", "titleFont": "Poppins" },
@@ -20,11 +20,6 @@
       "as": ["Category", "Value"]
     }
   ],
-  "mark": {
-    "type": "area",
-    "interpolate": "monotone",
-    "opacity": 0.8
-  },
   "params": [
     {
       "name": "series_filter",
@@ -32,38 +27,68 @@
       "bind": "legend"
     }
   ],
-  "encoding": {
-    "x": {
-      "field": "Financial year",
-      "type": "ordinal",
-      "title": "Financial Year",
-      "axis": { "labelAngle": 0  ,  
-        "labelFontSize": 12,
-        "titleFontSize": 13 
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "interpolate": "monotone",
+        "opacity": 0.8
+      },
+      "encoding": {
+        "x": {
+          "field": "Financial year",
+          "type": "ordinal",
+          "title": "Financial Year",
+          "axis": {
+            "labelAngle": 0,
+            "labelFontSize": 12,
+            "titleFontSize": 13
+          }
+        },
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "title": "Consumption ($ billion)"
+        },
+        "color": {
+          "field": "Category",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Domestic consumption ($b)", "International consumption ($b)"],
+            "range": ["#493699", "#f4a261"]
+          },
+          "title": ""
+        },
+        "opacity": {
+          "condition": { "param": "series_filter", "value": 1 },
+          "value": 0.2
+        },
+        "tooltip": [
+          { "field": "Financial year", "title": "Financial Year" },
+          { "field": "Category", "title": "Type" },
+          { "field": "Value", "title": "Tourism Consumption ($b)", "format": ".2f" }
+        ]
       }
     },
-    "y": {
-      "field": "Value",
-      "type": "quantitative",
-      "title": "Consumption ($ billion)"
-    },
-    "color": {
-      "field": "Category",
-      "type": "nominal",
-      "scale": {
-        "domain": ["Domestic consumption ($b)", "International consumption ($b)"],
-        "range": ["#493699", "#f4a261"]
+    {
+      "data": {
+        "values": [
+          { "Year": 2020, "Value": 15, "label": "Tourism dip during COVID" }
+        ]
       },
-      "title": ""
-    },
-    "opacity": {
-      "condition": { "param": "series_filter", "value": 1 },
-      "value": 0.2
-    },
-    "tooltip": [
-      { "field": "Financial year", "title": "Financial Year" },
-      { "field": "Category", "title": "Type" },
-      { "field": "Value", "title": "Tourism Consumption ($b)", "format": ".2f" }
-    ]
-  }
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "dy": -10,
+        "fontSize": 12,
+        "color": "#e76f51"
+      },
+      "encoding": {
+        "x": { "field": "Year", "type": "quantitative" },
+        "y": { "field": "Value", "type": "quantitative" },
+        "text": { "field": "label" }
+      }
+    }
+  ]
 }

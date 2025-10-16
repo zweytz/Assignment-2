@@ -102,7 +102,7 @@
     },
     {
       "data": { "values": [{ "Year": 2020, "Value": 60, "label": "COVID impact" }] },
-      "mark": { "type": "text", "color": "red", "dy": 130, "fontSize": 12 },
+      "mark": { "type": "text", "color": "#e63946", "dy": 130, "fontSize": 12 },
       "encoding": {
         "x": { "field": "Year", "type": "quantitative" },
         "y": { "field": "Value", "type": "quantitative", "axis": null },

@@ -45,7 +45,7 @@
     "y": {
       "field": "Value",
       "type": "quantitative",
-      "title": "Tourism Consumption ($ billion)"
+      "title": "Consumption ($ billion)"
     },
     "color": {
       "field": "Category",

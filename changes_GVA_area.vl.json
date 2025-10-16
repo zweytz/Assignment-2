@@ -10,7 +10,7 @@
   },
       "config": {
     "font": "Poppins",
-    "axis": { "labelFont": "Poppins", "titleFont": "Poppins" },
+    "axis": { "labelFont": "Poppins", "titleFont": "Poppins", "labelFontSize": 12, "titleFontSize": 13 },
     "legend": { "labelFont": "Poppins", "titleFont": "Poppins" },
     "title": { "font": "Poppins" }
   },
@@ -37,7 +37,10 @@
       "field": "Financial year",
       "type": "ordinal",
       "title": "Financial Year",
-      "axis": { "labelAngle": 0 }
+      "axis": { "labelAngle": 0  ,  
+        "labelFontSize": 12,
+        "titleFontSize": 13 
+      }
     },
     "y": {
       "field": "Value",

@@ -8,7 +8,7 @@
   },
     "config": {
     "font": "Poppins",
-    "axis": { "labelFont": "Poppins", "titleFont": "Poppins" },
+    "axis": { "labelFont": "Poppins", "titleFont": "Poppins", "labelFontSize": 12, "titleFontSize": 13 },
     "legend": { "labelFont": "Poppins", "titleFont": "Poppins" },
     "title": { "font": "Poppins" }
   },
@@ -34,7 +34,7 @@
           "field": "Year",
           "type": "quantitative",
           "title": "Year",
-          "axis": { "labelAngle": 0, "format": "d", "tickMinStep": 1, "orient": "bottom" },
+          "axis": { "labelAngle": 0, "format": "d", "tickMinStep": 1, "orient": "bottom", "labelFontSize": 12, "titleFontSize": 13 },
           "scale": { "nice": false, "padding": 20 }
         },
         "y": {
@@ -42,7 +42,7 @@
           "type": "quantitative",
           "title": "Whole Economy ($b)",
           "scale": { "domain": [0, 2700] },
-          "axis": { "titleColor": "#493699", "values": [0, 900, 1800, 2700] }
+          "axis": { "titleColor": "#493699", "values": [0, 900, 1800, 2700], "labelFontSize": 12, "titleFontSize": 13 }
         },
         "color": {
           "field": "Category", "type": "nominal",
@@ -78,7 +78,7 @@
           "type": "quantitative",
           "title": "Tourism ($b)",
           "scale": { "domain": [0, 90] },
-          "axis": { "orient": "right", "titleColor": "#f4a261", "values": [0, 30, 60, 90] }
+          "axis": { "orient": "right", "titleColor": "#f4a261", "values": [0, 30, 60, 90], "labelFontSize": 12, "titleFontSize": 13 }
         },
         "opacity": {
           "condition": { "param": "series_filter", "value": 1 },

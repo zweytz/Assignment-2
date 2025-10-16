@@ -6,6 +6,12 @@
   "autosize": {
     "type": "fit"
   },
+    "config": {
+    "font": "Poppins",
+    "axis": { "labelFont": "Poppins", "titleFont": "Poppins" },
+    "legend": { "labelFont": "Poppins", "titleFont": "Poppins" },
+    "title": { "font": "Poppins" }
+  },
   "layer": [
     {
       "data": {
@@ -15,7 +21,7 @@
       "mark": { "type": "geoshape", "stroke": "white", "fill": "#f4a261" }
     },
     {
-      "data": { "url": "./tourismtripsin2024.csv" },
+      "data": { "url": "tourismtripsin2024.csv" },
       "transform": [
         {
           "calculate": "format(datum.Trips / 1000000, '.1f') + ' million trips'",
@@ -46,7 +52,7 @@
       }
     },
     {
-      "data": { "url": "./tourismtripsin2024.csv" },
+      "data": { "url": "tourismtripsin2024.csv" },
       "transform": [
         {
           "calculate": "format(datum.Trips / 1000000, '.1f') + ' million trips'",

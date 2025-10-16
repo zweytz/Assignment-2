@@ -50,6 +50,10 @@
           "legend": null
         },
         "color": { "value": "#493699" },
+        "opacity": {
+          "condition": { "param": "state_select", "value": 1 },
+          "value": 0.2
+        },
         "tooltip": [
           { "field": "State Name", "title": "State" },
           { "field": "tooltipTrip", "title": "Overnight Trips" },

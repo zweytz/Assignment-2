@@ -3,15 +3,16 @@
   "description": "Tourism consumption in purchasers' prices over time with legend filtering and COVID annotation",
   "data": { "url": "Tourism consumption in purchasers' prices over time.csv" },
   "width": "container",
-  "autosize": {
-    "type": "fit"
-  },
+  "autosize": { "type": "fit" },
   "config": {
     "font": "Poppins",
     "axis": { "labelFont": "Poppins", "titleFont": "Poppins", "labelFontSize": 12, "titleFontSize": 13 },
     "legend": { "labelFont": "Poppins", "titleFont": "Poppins" },
     "title": { "font": "Poppins" }
   },
+
+  "resolve": { "scale": { "y": "independent" } },
+
   "layer": [
     {
       "params": [

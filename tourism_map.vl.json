@@ -79,7 +79,11 @@
       "encoding": {
         "longitude": { "field": "lon", "type": "quantitative" },
         "latitude": { "field": "lat", "type": "quantitative" },
-        "text": { "field": "label", "type": "nominal" }
+        "text": { "field": "label", "type": "nominal" },
+        "opacity": {
+          "condition": { "param": "state_select", "value": 1 },
+          "value": 0.2
+        }
       }
     }
   ]
